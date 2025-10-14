@@ -1,0 +1,90 @@
+.journey-plan {
+  background-color: rgb(255, 165, 0);
+  width: 500px;
+  padding: 20px;
+  color: white;
+
+}
+
+.journey-plan h1 {
+  font-size: 25px;
+  font-weight: 900;
+  margin: 0 0 10px 0;
+}
+
+.journey-plan ul {
+  list-style-position: inside;
+  list-style-type: none;
+
+}
+
+.journey-plan > ul > li {
+  background-color: rgb(103, 158, 50);
+  padding: 0 20px 0 50px;
+}
+
+.journey-plan ul ul li {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-style: italic;
+  background-color: rgb(153, 180, 102);
+  padding-left: 40px;
+  background-repeat: no-repeat;
+  background-size: 40px;
+  background-position: 0 0;
+}
+
+.journey-plan span {
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+.journey-plan > ul > li > span {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgb(199, 124, 106);
+  margin-bottom: 10px;
+}
+
+.journey-plan ul ul li > span {
+  background-color: rgb(218, 106, 32);
+}
+
+.main-list-icon {
+  background-repeat: no-repeat;
+  background-size: 40px;
+  background-position: 5px 2px;
+  background-image: url(https://github.com/Computer-Science-Department-ChNU/web-technologies/blob/main/html-css/labs/lab-5/icons/rule.png?raw=true);
+}
+
+.path-choice-icon {
+  background-image: url(https://github.com/Computer-Science-Department-ChNU/web-technologies/blob/main/html-css/labs/lab-5/icons/ad_units.png?raw=true);
+}
+
+.plane-tickets-icon {
+  background-image: url(https://github.com/Computer-Science-Department-ChNU/web-technologies/blob/main/html-css/labs/lab-5/icons/airplane_ticket.png?raw=true);
+}
+
+.hotel-icon {
+  background-image: url(https://github.com/Computer-Science-Department-ChNU/web-technologies/blob/main/html-css/labs/lab-5/icons/hotel.png?raw=true);
+}
+
+.car-rent-icon {
+  background-image: url(https://github.com/Computer-Science-Department-ChNU/web-technologies/blob/main/html-css/labs/lab-5/icons/car_rental.png?raw=true);
+}
+
+.bar-icon {
+  background-image: url(https://github.com/Computer-Science-Department-ChNU/web-technologies/blob/main/html-css/labs/lab-5/icons/local_bar.png?raw=true);
+}
+
+.casino-icon {
+  background-image: url(https://github.com/Computer-Science-Department-ChNU/web-technologies/blob/main/html-css/labs/lab-5/icons/casino.png?raw=true);
+}
+
+.museum-icon {
+  background-image: url(https://github.com/Computer-Science-Department-ChNU/web-technologies/blob/main/html-css/labs/lab-5/icons/museum.png?raw=true);
+}
+
+.festivals-icon {
+  background-image: url(https://github.com/Computer-Science-Department-ChNU/web-technologies/blob/main/html-css/labs/lab-5/icons/festival.png?raw=true);
+}
