@@ -1,0 +1,149 @@
+/*
+ * =========================================
+ * ЗАВДАННЯ 4: BOX-SHADOW
+ * =========================================
+ */
+/* Базові стилі */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* 1. Обгортка */
+.wrapper {
+    width: 1140px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box; 
+}
+/* 2. Структура Header (Лого + Меню) */
+.logo {
+    float: left;
+}
+.logo img {
+    width: 80px;
+    height: auto;
+}
+.menu {
+    float: right;
+    margin-top: 20px;
+}
+
+/* 3. Горизонтальне меню */
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    float: left;
+    margin-left: 8px;
+}
+.menu li a {
+    display: inline-block;
+    background-color: #f37b4f; 
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.menu li a.active {
+    background-color: #e25a2a; 
+}
+
+/* 4. Структура Main */
+main {
+    clear: both;
+    margin-top: 20px;
+}
+
+/* Елемент для очищення float (ОБОВ'ЯЗКОВО!) */
+.clear {
+    clear: both;
+}
+
+.menu li a {
+    display: inline-block;
+    background-color: #f37b4f; 
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.menu li a.active {
+    background-color: #e25a2a; 
+}
+
+/* 1. Базовий стиль для 6 блоків */
+.shadow-box {
+    /* Розміри з завдання */
+    width: 250px;
+    height: 300px;
+
+    /* Позиціонування (Теорія, розділ 3) */
+    float: left;
+    margin: 20px; /* Відступи між блоками */
+    
+    /* Базова границя з завдання */
+    border: 1px solid green;
+}
+
+/* Стилізація вмісту блоків */
+.shadow-box h3 {
+    margin-top: 0;
+    padding: 10px 15px 0;
+}
+.shadow-box p {
+    padding: 0 15px;
+}
+.shadow-box img {
+    width: 100%; /* Картинка на всю ширину блоку */
+    height: auto;
+    /* Картинка притиснута до рамки, як на зразку */
+    display: block; 
+}
+
+
+/* 2. Специфічні тіні (Теорія, розділ 2) */
+
+.shadow-1 {
+    box-shadow: -10px -10px 5px 5px rgba(8, 180, 8);
+}
+
+.shadow-2 {
+    box-shadow: 0px 0px 5px 10px rgb(8, 180, 8);
+}
+
+/* Shadow 3: Внутрішня тінь (inset) */
+.shadow-3 {
+    box-shadow: 5px 5px 10px rgb(8, 180, 8);
+}
+
+/* Shadow 4: Декілька тіней (через кому) */
+.shadow-4 {
+    box-shadow: 0px 0px 20px 10px rgb(8, 180, 8);
+}
+
+/* Shadow 5: Імітація рамки з 4-х кольорів */
+.shadow-5 {
+    box-shadow:
+        /* (зсув X, зсув Y, розмиття, колір) */
+        0 -5px 0 0 orange,  /* Верхня лінія */
+        5px 0 0 0 blue,    /* Права лінія */
+        0 5px 0 0 yellow,  /* Нижня лінія */
+        -5px 0 0 0 red;    /* Ліва лінія */
+}
+
+/* Shadow 6: Тонка рамка з 2-х кольорів */
+.shadow-6 {
+    box-shadow:
+        0 -3px 0 0 orange,      /* Помаранчева лінія зверху */
+        0 3px 0 0 #10d10a,        /* Сіра лінія знизу */
+        1px 0 0 0 #aaa,        /* ...справа */
+        -1px 0 0 0 #aaa;       /* ...зліва */
+}
+
