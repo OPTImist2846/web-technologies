@@ -1,0 +1,204 @@
+/* Базові стилі */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* 1. Обгортка */
+.wrapper {
+    width: 1140px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+
+/* 2. Структура Header (Лого + Меню) */
+.logo {
+    float: left;
+}
+.logo img {
+    width: 80px;
+    height: auto;
+}
+.menu {
+    float: right;
+    margin-top: 20px;
+}
+
+/* 3. Горизонтальне меню */
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    float: left;
+    margin-left: 8px;
+}
+.menu li a {
+    display: inline-block;
+    background-color: #f37b4f; 
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.menu li a.active {
+    background-color: #e25a2a; 
+}
+
+
+/* 4. Структура Main */
+main {
+    clear: both;
+    margin-top: 20px;
+}
+
+/* Елемент для очищення float (ОБОВ'ЯЗКОВО!) */
+.clear {
+    clear: both;
+}
+
+
+/*
+ * =========================================
+ * ЗАВДАННЯ 1: БАГАТОКОЛОНОЧНИЙ ТЕКСТ
+ * =========================================
+ */
+.multi-column-content {
+    column-count: 3;
+    column-gap: 35px;
+    column-rule: 5px dotted red;
+    text-align: justify;
+}
+.multi-column-content img {
+    width: 200px;
+    height: auto; 
+}
+.img-left {
+    float: left;
+    margin-right: 15px; 
+    margin-bottom: 10px; 
+}
+.img-right {
+    float: right;
+    margin-left: 15px; 
+    margin-bottom: 10px; 
+}
+
+
+/*
+ * =========================================
+ * ЗАВДАННЯ 2: РАМКИ ТА ГРАНИЦІ
+ * =========================================
+ */
+.block {
+    width: 300px;
+    float: left;
+    margin: 20px;
+    padding: 15px;
+    height: 180px; 
+    box-sizing: border-box; 
+    border-style: solid;
+    border-width: 4px;
+    border-color: #6aaa3b; 
+    overflow: hidden; 
+}
+.block h3 {
+    margin-top: 0; 
+}
+
+/* Блоки 1-6 (border-radius) */
+.block-1 { border-radius: 15px; }
+.block-2 { border-radius: 40px 10px 40px 10px; }
+.block-3 { border-radius: 80px / 30px; }
+.block-4 { border-radius: 40px 0 40px 0; }
+.block-5 { border-width: 14px; border-radius: 30px; }
+.block-6 {
+    border-width: 14px;
+    border-radius: 20px 60px 20px 60px;
+    border-color: #b0dc4a #b0dc4a #6aaa3b #6aaa3b;
+}
+
+/* Блоки 7-12 (border-image) */
+.border-img {
+    border: 20px solid transparent;
+    border-image-source: url('border.png'); 
+    border-image-slice: 27;
+}
+.block-7, .block-10 { border-image-repeat: repeat; }
+.block-8, .block-11 { border-image-repeat: round; }
+.block-9, .block-12 { border-image-repeat: stretch; }
+
+
+/*
+ * =========================================
+ * ЗАВДАННЯ 3: BORDER-RADIUS + BACKGROUND (ОНОВЛЕНО)
+ * =========================================
+ */
+
+/* Загальний стиль для блоків 13, 14, 15, 16 */
+.styled-box {
+    border-radius: 15px;
+    overflow: hidden; 
+    color: white;
+    padding: 20px;
+    /* 'margin-bottom' тепер створює відступ МІЖ блоком 13 і 14 */
+    margin-bottom: 20px; 
+    box-sizing: border-box; 
+}
+
+.styled-box h3 {
+    margin-top: 0;
+}
+
+/* Кольори */
+.box-13 { 
+    background-color: #5d2b2a; 
+}
+        
+/* Блок 14 (контейнер) */
+.box-14 { 
+    background-color: #8a4e4d; 
+}
+        
+/* Блоки 15 і 16 (вкладені) */
+.box-15, .box-16 { 
+    background-color: #7e0d0b; 
+    /* ВАЖЛИВО: вкладені блоки 15 і 16 не повинні мати 
+      нижнього відступу, який є у .styled-box,
+      тому ми його "скидаємо"
+    */
+    margin-bottom: 0;
+}
+
+/* Позиціонування float (як і раніше) */
+.box-15 {
+    float: left;
+    width: 48.5%; 
+}
+.box-16 {
+    float: right;
+    width: 48.5%;
+}
+        
+/* Стиль для нижнього тексту (клас 'box-footer').
+  Він більше не .styled-box, тому в нього немає 
+  ні padding, ні margin, ні кольору.
+  Ми повинні йому дати відступ зверху.
+*/
+.box-footer {
+    margin-top: 20px; 
+    /* Він успадкує білий колір від .box-14, тож це добре */
+}
+
+/* Переконайтесь, що у вас є цей клас 
+   (він потрібен для <div class="clear"></div>)
+*/
+.clear {
+    clear: both;
+}
