@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.wrapper {
+    width: 1140px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+.logo {
+    float: left;
+}
+.logo img {
+    width: 80px;
+    height: auto;
+}
+.menu {
+    float: right;
+    margin-top: 20px;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    float: left;
+    margin-left: 8px;
+}
+.menu li a {
+    display: inline-block;
+    background-color: #f37b4f; 
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.menu li a.active {
+    background-color: #e25a2a; 
+}
+
+main {
+    clear: both;
+    margin-top: 20px;
+}
+
+.clear {
+    clear: both;
+}
+
+.menu li a {
+    display: inline-block;
+    background-color: #f37b4f; 
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.menu li a.active {
+    background-color: #e25a2a; 
+}
+
+.grad-box {
+    width: 300px;
+    height: 400px;
+    float: left;
+    margin: 15px; 
+    position: relative; 
+    color: white;
+    border-radius: 5px; 
+    overflow: hidden; 
+    box-sizing: border-box;
+}
+
+.grad-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; 
+    overflow: hidden; 
+    position: absolute;
+    top: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 2; 
+}
+
+.grad-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.grad-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 2; 
+}
+
+.grad-text h3 {
+    margin-top: 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5); 
+}
+.grad-text p {
+    font-size: 0.9em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5); 
+}
+
+.box-1 {
+    background: linear-gradient(to top right, #038a03, #d9ff00, #1101f7c4, #fdba00);
+}
+
+.box-2 {
+    background: repeating-linear-gradient(
+        -45deg, 
+        #4f2480, 
+        #4f2480 20px, 
+        #fada8b 20px, 
+        #fada8b 40px,
+        #24c124 40px,
+        #24c124 60px
+    );
+}
+
+.box-3 {
+    background: repeating-linear-gradient(
+        to right, 
+        #24c124, 
+        #24c124 20px, 
+        #fff 20px, 
+        #fff 40px
+    );
+}
+
+.box-4 {
+    background: linear-gradient(to top, #24c124, #fada8b 60%, #4a3b9f);
+}
+
+.box-5 {
+    background: radial-gradient(circle, #fff, #fada8b, #e06c2c, #4a3b9f, #24c124);
+}

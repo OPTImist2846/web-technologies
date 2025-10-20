@@ -1,9 +1,3 @@
-/*
- * =========================================
- * ЗАВДАННЯ 4: BOX-SHADOW
- * =========================================
- */
-/* Базові стилі */
 body {
     margin: 0;
     padding: 0;
@@ -11,14 +5,13 @@ body {
     line-height: 1.6;
 }
 
-/* 1. Обгортка */
 .wrapper {
     width: 1140px;
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box; 
 }
-/* 2. Структура Header (Лого + Меню) */
+
 .logo {
     float: left;
 }
@@ -31,7 +24,6 @@ body {
     margin-top: 20px;
 }
 
-/* 3. Горизонтальне меню */
 .menu ul {
     list-style: none;
     margin: 0;
@@ -54,13 +46,11 @@ body {
     background-color: #e25a2a; 
 }
 
-/* 4. Структура Main */
 main {
     clear: both;
     margin-top: 20px;
 }
 
-/* Елемент для очищення float (ОБОВ'ЯЗКОВО!) */
 .clear {
     clear: both;
 }
@@ -78,21 +68,16 @@ main {
     background-color: #e25a2a; 
 }
 
-/* 1. Базовий стиль для 6 блоків */
 .shadow-box {
-    /* Розміри з завдання */
     width: 250px;
     height: 300px;
 
-    /* Позиціонування (Теорія, розділ 3) */
     float: left;
-    margin: 20px; /* Відступи між блоками */
+    margin: 20px; 
     
-    /* Базова границя з завдання */
     border: 1px solid green;
 }
 
-/* Стилізація вмісту блоків */
 .shadow-box h3 {
     margin-top: 0;
     padding: 10px 15px 0;
@@ -101,14 +86,10 @@ main {
     padding: 0 15px;
 }
 .shadow-box img {
-    width: 100%; /* Картинка на всю ширину блоку */
+    width: 100%; 
     height: auto;
-    /* Картинка притиснута до рамки, як на зразку */
     display: block; 
 }
-
-
-/* 2. Специфічні тіні (Теорія, розділ 2) */
 
 .shadow-1 {
     box-shadow: -10px -10px 5px 5px rgba(8, 180, 8);
@@ -118,32 +99,26 @@ main {
     box-shadow: 0px 0px 5px 10px rgb(8, 180, 8);
 }
 
-/* Shadow 3: Внутрішня тінь (inset) */
 .shadow-3 {
     box-shadow: 5px 5px 10px rgb(8, 180, 8);
 }
 
-/* Shadow 4: Декілька тіней (через кому) */
 .shadow-4 {
     box-shadow: 0px 0px 20px 10px rgb(8, 180, 8);
 }
 
-/* Shadow 5: Імітація рамки з 4-х кольорів */
 .shadow-5 {
     box-shadow:
-        /* (зсув X, зсув Y, розмиття, колір) */
-        0 -5px 0 0 orange,  /* Верхня лінія */
-        5px 0 0 0 blue,    /* Права лінія */
-        0 5px 0 0 yellow,  /* Нижня лінія */
-        -5px 0 0 0 red;    /* Ліва лінія */
+        0 -5px 0 0 orange, 
+        5px 0 0 0 blue, 
+        0 5px 0 0 yellow, 
+        -5px 0 0 0 red; 
 }
 
-/* Shadow 6: Тонка рамка з 2-х кольорів */
 .shadow-6 {
     box-shadow:
-        0 -3px 0 0 orange,      /* Помаранчева лінія зверху */
-        0 3px 0 0 #10d10a,        /* Сіра лінія знизу */
-        1px 0 0 0 #aaa,        /* ...справа */
-        -1px 0 0 0 #aaa;       /* ...зліва */
+        0 -3px 0 0 orange, 
+        0 3px 0 0 #10d10a, 
+        1px 0 0 0 #aaa, 
+        -1px 0 0 0 #aaa; 
 }
-

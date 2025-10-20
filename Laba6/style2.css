@@ -1,4 +1,3 @@
-/* Базові стилі, щоб прибрати відступи браузера */
 body {
     margin: 0;
     padding: 0;
@@ -6,156 +5,82 @@ body {
     line-height: 1.6;
 }
 
-/* * 1. ПОЧАТКОВІ НАЛАШТУВАННЯ (Обгортка)
- */
 .wrapper {
-    /* ширина блоку «обгортка» 1140px */
     width: 1140px;
-    
-    /* вирівняти всі елементи в блоці «обгортка» по центру */
     margin: 0 auto;
-    
-    /* внутрішні поля – 20px */
     padding: 20px;
-    
-    /* Додатково, щоб padding не впливав на ширину 1140px */
     box-sizing: border-box; 
 }
 
-
-/* * 2. СТРУКТУРА HEADER (Логотип + Меню)
- * Використовуємо float, як вказано в завданні
- */
 .logo {
-    /* Розміщення логотипу зліва */
     float: left;
 }
 
 .logo img {
-    /* Просто для візуального оформлення */
     width: 80px;
     height: auto;
 }
 
 .menu {
-    /* Розміщення меню справа */
     float: right;
-    /* Невеликий відступ зверху для візуального центрування з лого */
     margin-top: 20px;
 }
 
-/* * 3. ГОРИЗОНТАЛЬНЕ МЕНЮ (Теорія, розділ 4)
- */
 .menu ul {
-    /* Прибираємо маркери списку */
     list-style: none;
-    
-    /* Скидаємо відступи браузера */
     margin: 0;
     padding: 0;
 }
 
 .menu li {
-    /* Розташовуємо пункти меню горизонтально */
     float: left;
-    
-    /* Зовнішні відступи, щоб відсунути пункти */
     margin-left: 8px;
 }
 
 .menu li a {
-    /* Перетворюємо посилання на блокові для стилізації */
     display: inline-block;
-    
-    /* Візуальне оформлення (~85% до прикладу) */
-    background-color: #f37b4f; /* Оранжевий колір */
+    background-color: #f37b4f; 
     color: white;
     padding: 10px 20px;
     text-decoration: none;
     font-weight: bold;
-
-    /* Використовуємо border-radius з теорії для заокруглення */
     border-radius: 5px;
 }
 
-/* Стиль для активного пункту меню */
 .menu li a.active {
-    background-color: #e25a2a; /* Трохи темніший оранжевий */
+    background-color: #e25a2a; 
 }
 
-
-/* * 4. СТРУКТУРА MAIN (Контент)
- */
 main {
-    /* * ОБОВ'ЯЗКОВО!
-     * Використовуємо 'clear: both' (Теорія, розділ 3),
-     * щоб 'main' не "обтікав" плаваючі елементи 'header' (logo і menu),
-     * а починався чітко під ними.
-     */
     clear: both;
-    
-    /* Відступ від хедера */
     margin-top: 20px;
 }
 
-/*
- * =========================================
- * ЗАВДАННЯ 1: БАГАТОКОЛОНОЧНИЙ ТЕКСТ
- * =========================================
- */
-
-/* Багатоколоночний текст (Теорія, розділ 5) */
 .multi-column-content {
-    /* оптимальне число колонок – 3 */
     column-count: 3;
-    
-    /* відстань між колонками – 35px */
     column-gap: 35px;
-    
-    /* розділова лінія між колонками (скорочений запис) */
-    /* товщина – 5px, стиль – пунктирна (dotted), колір – червоний */
     column-rule: 5px dotted red;
-
-    /* Додатково для кращого вигляду тексту в колонках */
     text-align: justify;
 }
 
-/* "Плаваючі" картинки (Теорія, розділ 3) */
 .multi-column-content img {
-    /* ширина кожного рисунку – 200px */
     width: 200px;
-    height: auto; /* Зберігаємо пропорції */
+    height: auto; 
 }
 
 .img-left {
-    /* Вирівнює елемент по лівому краю, текст "обтікає" його справа */
     float: left;
-    
-    /* зовнішні відступи від рисунка до «обтікаючого» тексту (10px-20px) */
-    margin-right: 15px; /* Відступ справа */
-    margin-bottom: 10px; /* Відступ знизу */
+    margin-right: 15px; 
+    margin-bottom: 10px; 
 }
 
 .img-right {
-    /* Вирівнює елемент по правому краю, текст "обтікає" його зліва */
     float: right;
-
-    /* зовнішні відступи від рисунка до «обтікаючого» тексту (10px-20px) */
-    margin-left: 15px; /* Відступ зліва */
-    margin-bottom: 10px; /* Відступ знизу */
+    margin-left: 15px; 
+    margin-bottom: 10px; 
 }
 
-
-/*
- * =========================================
- * ЗАВДАННЯ 2: РАМКИ ТА ГРАНИЦІ
- * =========================================
- */
-
-/* * 1. СТИЛІЗАЦІЯ БЛОКІВ
- */
 .block {
-    /* ... (всі ваші старі стилі: width, float, margin, і т.д.) ... */
     width: 300px;
     float: left;
     margin: 20px;
@@ -165,93 +90,58 @@ main {
     border-style: solid;
     border-width: 4px;
     border-color: #6aaa3b;
-
-    /* ОСЬ РІШЕННЯ:
-      Приховує все, що виходить за межі блоку 
-    */
     overflow: hidden;
 }
 
 .block h3 {
-    margin-top: 0; /* Прибираємо верхній відступ заголовка */
+    margin-top: 0; 
 }
 
-/* Елемент для очищення float (Теорія, розділ 3) */
 .clear {
     clear: both;
 }
 
-/* * 2. БЛОКИ 1-6 (BORDER-RADIUS) (Теорія, розділ 1)
- */
-
-/* Block 1: Однакове заокруглення */
 .block-1 {
     border-radius: 15px;
 }
 
-/* Block 2: Різні заокруглення (верх-ліво, верх-право, низ-право, низ-ліво) */
 .block-2 {
     border-radius: 40px 10px 40px 10px;
 }
 
-/* Block 3: Еліптичне заокруглення (Горизонтальний / Вертикальний радіус) */
 .block-3 {
-    /* 80px - горизонтальний, 30px - вертикальний */
     border-radius: 80px / 30px;
 }
 
-/* Block 4: Заокруглення лише двох кутів */
 .block-4 {
-    /* (верх-ліво, верх-право, низ-право, низ-ліво) */
     border-radius: 40px 0 40px 0;
 }
 
-/* Block 5: Товста рамка з заокругленням */
 .block-5 {
     border-width: 14px;
     border-radius: 30px;
 }
 
-/* Block 6: Товста рамка, асиметричне заокруглення та різні кольори 
-   (Теорія дозволяє 4 значення для border-color)
-*/
 .block-6 {
     border-width: 14px;
     border-radius: 20px 60px 20px 60px;
-    /* (верх, право, низ, ліво) */
     border-color: #b0dc4a #b0dc4a #6aaa3b #6aaa3b;
 }
 
-
-/* * 3. БЛОКИ 7-12 (BORDER-IMAGE) (Теорія, розділ 1)
- */
 .border-img {
-    /* Встановлюємо ширину рамки і робимо її прозорою, щоб 'border-image' її "зайняв" */
     border: 20px solid transparent;
-
-    /* Вказуємо шлях до зображення (Теорія: border-image-source) */
     border-image-source: url('https://udn.realityripple.com/samples/2c/fa0192d18e.png');
-    
-    /* * Вказуємо, як "нарізати" зображення (Теорія: border-image-slice)
-     * 27 - це розмір кутових частин у цьому конкретному зображенні (воно 81x81px)
-     */
     border-image-slice: 27;
 }
 
-/* Block 7, 10: Використовуємо 'repeat' (повторення) */
 .block-7, .block-10 {
-    /* (Теорія: border-image-repeat: repeat) */
     border-image-repeat: repeat;
 }
 
-/* Block 8, 11: Використовуємо 'round' (повторення з масштабуванням) */
 .block-8, .block-11 {
-    /* (Теорія: border-image-repeat: round) */
     border-image-repeat: round;
 }
 
-/* Block 9, 12: Використовуємо 'stretch' (розтягування) - за замовчуванням */
 .block-9, .block-12 {
-    /* (Теорія: border-image-repeat: stretch) */
     border-image-repeat: stretch;
 }
