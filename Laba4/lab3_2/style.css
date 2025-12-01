@@ -1,0 +1,14 @@
+body{
+    text-align: center;
+}
+
+h1{
+    color: red;
+    font-size: 36px;
+}
+
+hr{
+    background-color: #00FF00;
+    width: 75%;
+    height: 2px;
+}

@@ -1,0 +1,32 @@
+a {
+    color: blueviolet;
+}
+
+.main-menu {
+    color: green;
+}
+
+.berries-pic {
+    list-style-type: square;
+}
+
+.veggies-pic {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.veggies-pic li::before {
+    content: "✔️";
+    margin-right: 10px;
+}
+
+ul li ul {
+    list-style-type: none;
+}
+
+
+ol li ol {
+    list-style-type: none;
+    text-align: left;
+    padding: 0px;
+}
