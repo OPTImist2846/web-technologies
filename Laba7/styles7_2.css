@@ -1,0 +1,31 @@
+.container{
+    width: 400px;
+    margin: 50px auto;
+    font-family: sans-serif;
+}
+
+.box-green {
+background-color: #4CAF50;
+    color: black;
+    padding: 15px;
+    text-align: center;
+    border: 2px solid black;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    margin-top: 20px; 
+}
+
+.box-blue {
+   background-color: #5b9bd5;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid black;
+    margin-top: 10px;
+    visibility: hidden;
+}
+
+.box-green:hover + .box-blue {
+    visibility: visible;
+}
