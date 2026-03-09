@@ -20,5 +20,9 @@ function findMinMax(arr) {
 }
 
 // Тест
-let myNumbers = [15, 3, 22, 8, -5, 42];
-findMinMax(myNumbers);
+function runTask1() {
+    let myNumbers = [15, 3, 22, 8, -5, 42];
+    console.log("Масив:", myNumbers);
+
+    findMinMax(myNumbers);
+}

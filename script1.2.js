@@ -18,9 +18,15 @@ function compareObjects(obj1, obj2) {
 }
 
 // Тест
+function runTask2() {
 let student1 = { name: "Oleksii", group: "IT-21" };
 let student2 = { name: "Oleksii", group: "IT-21" };
 let student3 = { name: "Ivan", group: "IT-21" };
 
+console.log(student1);
+console.log(student2);
+console.log(student3);
+
 console.log("student1 і student2 однакові?", compareObjects(student1, student2));
 console.log("student1 і student3 однакові?", compareObjects(student1, student3));
+}
