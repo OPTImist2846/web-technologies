@@ -10,6 +10,9 @@ function checkRange(num, min, max) {
 // Тест
 function runTask3() {
 
+console.log(10, 5, 20)
+console.log(3, 5, 20)
+
     checkRange(10, 5, 20);
     checkRange(3, 5, 20);
 }
