@@ -1,5 +1,4 @@
 function findMinMax(arr) {
-    // Спочатку припускаємо, що перше число в масиві є і мінімумом, і максимумом
     let min = arr[0];
     let max = arr[0];
 
@@ -20,5 +19,6 @@ function findMinMax(arr) {
     return { min: min, max: max };
 }
 
+// Тест
 let myNumbers = [15, 3, 22, 8, -5, 42];
 findMinMax(myNumbers);

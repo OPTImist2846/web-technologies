@@ -8,6 +8,6 @@ function checkRange(num, min, max) {
         return false;
     }
 }
-
+// Тест
 checkRange(10, 5, 20);
 checkRange(3, 5, 20); 

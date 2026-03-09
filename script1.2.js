@@ -17,7 +17,7 @@ function compareObjects(obj1, obj2) {
     return true; 
 }
 
-
+// Тест
 let student1 = { name: "Oleksii", group: "IT-21" };
 let student2 = { name: "Oleksii", group: "IT-21" };
 let student3 = { name: "Ivan", group: "IT-21" };
