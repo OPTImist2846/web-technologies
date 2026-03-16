@@ -48,3 +48,13 @@ function task3_DayOfWeek(dayNumber) {
     }
     return dayName;
 }
+
+function task4_OddLengthStrings(stringsArray) {
+    let result = [];
+    for (let str of stringsArray) {
+        if (str.length % 2 !== 0) {
+            result.push(str);
+        }
+    }
+    return result;
+}
