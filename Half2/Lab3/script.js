@@ -66,3 +66,11 @@ const task5_IncrementNumbers = (numbersArray) => {
     }
     return result;
 }
+
+function task6_CheckTen(a, b) {
+    if (a + b === 10 || Math.abs(a - b) === 10) {
+        return true;
+    } else {
+        return false;
+    }
+}
