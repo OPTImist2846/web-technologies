@@ -74,3 +74,15 @@ function task6_CheckTen(a, b) {
         return false;
     }
 }
+
+console.log("РЕЗУЛЬТАТИ");
+console.log("Завдання 1. Сума 10 чисел Фібоначчі:", task1_Fibonacci());
+console.log("Завдання 2. Сума простих чисел від 1 до 1000:", task2_Primes());
+let userDay = 4; 
+console.log(`Завдання 3. День тижня для числа ${userDay}:`, task3_DayOfWeek(userDay));
+let testStrings = ["Олесь", "JS", "Університет", "Код", "Програмування"];
+console.log("Завдання 4. Рядки з непарною довжиною:", task4_OddLengthStrings(testStrings));
+let testNumbers = [10, 25, -3, 99];
+console.log("Завдання 5. Масив збільшений на 1:", task5_IncrementNumbers(testNumbers));
+console.log("Завдання 6. a=15, b=5 (сума або різниця 10?):", task6_CheckTen(15, 5));
+console.log("Завдання 6. a=3, b=4 (сума або різниця 10?):", task6_CheckTen(3, 4));
