@@ -58,3 +58,11 @@ function task4_OddLengthStrings(stringsArray) {
     }
     return result;
 }
+
+const task5_IncrementNumbers = (numbersArray) => {
+    let result = [];
+    for (let num of numbersArray) {
+        result.push(num + 1);
+    }
+    return result;
+}
