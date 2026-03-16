@@ -12,3 +12,23 @@ function task1_Fibonacci() {
     }
     return sum;
 }
+
+function task2_Primes() {
+    let sum = 0;
+
+    for (let i = 2; i <= 1000; i++) {
+        let isPrime = true;
+        
+        for (let j = 2; j <= Math.sqrt(i); j++) {
+            if (i % j === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        
+        if (isPrime) {
+            sum += i;
+        }
+    }
+    return sum;
+}
