@@ -93,3 +93,62 @@ function task5() {
     combinedArray.splice(0, 3);
     console.log("5. Масив після видалення перших 3 елементів:", combinedArray);
 }
+
+function task6() {
+    console.log("\n=== Завдання 6 ===");
+    
+    function libraryManagement() {
+        // 1. Початковий масив
+        let library = [
+            { title: "Кобзар", author: "Тарас Шевченко", genre: "Поезія", pages: 700, isAvailable: true },
+            { title: "Тіні", author: "Стівен Кінг", genre: "Жахи", pages: 400, isAvailable: false }
+        ];
+
+        // 2. Додавання книги
+        function addBook(title, author, genre, pages) {
+            library.push({ title, author, genre, pages, isAvailable: true });
+        }
+
+        // 3. Видалення за назвою
+        function removeBook(title) {
+            library = library.filter(book => book.title !== title);
+        }
+
+        // 4. Пошук за автором
+        function findBooksByAuthor(author) {
+            return library.filter(book => book.author === author);
+        }
+
+        // 5. Позначення як взятої/повернутої (isBorrowed = true означає що книгу взяли)
+        function toggleBookAvailability(title, isBorrowed) {
+            let book = library.find(b => b.title === title);
+            if (book) {
+                book.isAvailable = !isBorrowed; 
+            }
+        }
+
+        function sortBooksByPages() {
+            library.sort((a, b) => a.pages - b.pages);
+        }
+
+        function getBooksStatistics() {
+            let total = library.length;
+            let available = library.filter(b => b.isAvailable).length;
+            let borrowed = total - available;
+            let totalPages = library.reduce((sum, b) => sum + b.pages, 0);
+            let avgPages = total === 0 ? 0 : Math.round(totalPages / total);
+
+            return { загально: total, доступно: available, взято: borrowed, середняКількістьСторінок: avgPages };
+        }
+
+        addBook("1984", "Джордж Оруелл", "Антиутопія", 328);
+        toggleBookAvailability("Кобзар", true);
+        sortBooksByPages();
+        
+        console.log("Знайдено книги Оруелла:", findBooksByAuthor("Джордж Оруелл"));
+        console.log("Статистика:", getBooksStatistics());
+        console.log("Повний стан бібліотеки:", library);
+    }
+    
+    libraryManagement();
+}
