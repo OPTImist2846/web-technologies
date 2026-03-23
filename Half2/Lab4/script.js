@@ -167,3 +167,11 @@ function task7() {
     
     console.log("4. Оновлений об'єкт студента:", student);
 }
+
+task1();
+task2();
+task3();
+task4();
+task5();
+task6();
+task7();
