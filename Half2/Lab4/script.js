@@ -152,3 +152,18 @@ function task6() {
     
     libraryManagement();
 }
+
+function task7() {
+    console.log("\n=== Завдання 7 ===");
+    let student = {
+        name: "Євген",
+        age: 21,
+        course: 3
+    };
+    
+    student.subjects = ["Математика", "Програмування", "Бази даних"];
+    
+    delete student.age;
+    
+    console.log("4. Оновлений об'єкт студента:", student);
+}
