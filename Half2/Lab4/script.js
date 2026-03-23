@@ -52,3 +52,23 @@ function task3() {
     employees.push({ name: "Олена", age: 30, position: "тестувальник" });
     console.log("5. Оновлений масив (додано Олену):", employees);
 }
+
+function task4() {
+    console.log("\n=== Завдання 4 ===");
+    let students = [
+        { name: "Олексій", age: 20, course: 2 },
+        { name: "Дарина", age: 22, course: 4 },
+        { name: "Максим", age: 19, course: 1 },
+        { name: "Софія", age: 21, course: 3 }
+    ];
+    
+    students = students.filter(student => student.name !== "Олексій");
+
+    students.push({ name: "Назар", age: 20, course: 2 });
+    
+    students.sort((a, b) => b.age - a.age);
+    console.log("2-4. Відсортовано від старших до молодших (без Олексія, з Назаром):", students);
+
+    let thirdCourseStudent = students.find(student => student.course === 3);
+    console.log("5. Студент 3-го курсу:", thirdCourseStudent);
+}
