@@ -72,3 +72,24 @@ function task4() {
     let thirdCourseStudent = students.find(student => student.course === 3);
     console.log("5. Студент 3-го курсу:", thirdCourseStudent);
 }
+
+function task5() {
+    console.log("\n=== Завдання 5 ===");
+    let numbers = [1, 2, 3, 4, 5, 6];
+
+    let squares = numbers.map(num => num * num);
+    console.log("1. Квадрати чисел:", squares);
+
+    let evens = numbers.filter(num => num % 2 === 0);
+    console.log("2. Парні числа:", evens);
+
+    let sum = numbers.reduce((total, current) => total + current, 0);
+    console.log("3. Сума всіх елементів:", sum);
+
+    let moreNumbers = [7, 8, 9, 10, 11];
+    let combinedArray = numbers.concat(moreNumbers);
+    console.log("4. Об'єднаний масив:", combinedArray);
+
+    combinedArray.splice(0, 3);
+    console.log("5. Масив після видалення перших 3 елементів:", combinedArray);
+}
