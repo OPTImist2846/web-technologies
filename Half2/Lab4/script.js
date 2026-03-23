@@ -29,3 +29,26 @@ function task1() {
     let joinedColors = blueColors.join(", ");
     console.log("4-5. Об'єднаний рядок:", joinedColors);
 }
+
+function task3() {
+    console.log("\n=== Завдання 3 ===");
+    // 1. Створення масиву
+    let employees = [
+        { name: "Марія", age: 28, position: "дизайнер" },
+        { name: "Андрій", age: 35, position: "розробник" },
+        { name: "Віктор", age: 42, position: "менеджер" },
+        { name: "Ірина", age: 25, position: "розробник" }
+    ];
+    
+    employees.sort((a, b) => a.name.localeCompare(b.name));
+    console.log("2. Відсортовано за іменами:", employees);
+    
+    let devs = employees.filter(emp => emp.position === "розробник");
+    console.log("3. Тільки розробники:", devs);
+    
+    employees = employees.filter(emp => emp.age <= 40);
+    console.log("4. Видалено працівників старше 40:", employees);
+
+    employees.push({ name: "Олена", age: 30, position: "тестувальник" });
+    console.log("5. Оновлений масив (додано Олену):", employees);
+}
