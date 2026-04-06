@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна: Дата і Час</title>
+    <style>
+        body { 
+            font-family: sans-serif; 
+            padding: 30px; 
+            background-color: #1e272e; 
+            color: #d2dae2; 
+            text-align: center;
+        }
+        .container {
+            background-color: #485460;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        #clock {
+            font-size: 48px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            color: #0fbcf9;
+            text-shadow: 0 0 10px #0fbcf9;
+        }
+        .blink {
+            animation: blinker 1s step-start infinite;
+        }
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
+
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            background-color: #0fbcf9;
+            color: #1e272e;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover { background-color: #0be881; }
+        .result { font-size: 20px; font-weight: bold; color: #0be881; margin-top: 10px;}
+    </style>
+</head>
+<body>
+
+    <h1>Робота з Дата і Часом</h1>
+
+    <div class="container">
+        <h2>Поточний час</h2>
+        <div id="clock">00<span class="blink">:</span>00<span class="blink">:</span>00</div>
+    </div>
+
+    <div class="container">
+        <h2>Таймер зворотного відліку</h2>
+        <p>Виберіть дату та час завершення:</p>
+        <input type="datetime-local" id="targetTimer">
+        <button id="startTimerBtn">Запустити таймер</button>
+        <div id="timerDisplay" class="result">Таймер не запущено</div>
+    </div>
+
+    <div class="container">
+        <h2>Відлік до Дня Народження</h2>
+        <p>Оберіть дату вашого народження у календарі:</p>
+        <input type="date" id="bdayInput">
+        <button id="startBdayBtn">Порахувати</button>
+        <div id="bdayDisplay" class="result">Введіть дату...</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

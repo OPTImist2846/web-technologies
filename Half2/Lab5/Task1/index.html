@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна: Лампочка</title>
+   <style>
+        body { 
+            font-family: sans-serif; 
+            text-align: center; 
+            padding: 50px; 
+            background-color: #222; 
+            color: white; 
+        }
+        
+        .bulb {
+            position: relative;
+            width: 100px;
+            height: 130px;
+            background-color: #444;
+            margin: 30px auto 60px;
+            border-radius: 50% 50% 40% 40% / 60% 60% 40% 40%; 
+            transition: all 0.3s ease;
+            opacity: 1; 
+        }
+
+        .bulb::after {
+            content: "";
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 45px;
+            height: 35px;
+            background-color: #7f8c8d;
+            border-radius: 0 0 15px 15px;
+            
+            background-image: repeating-linear-gradient(
+                transparent,
+                transparent 5px,
+                #636e72 5px,
+                #636e72 8px
+            );
+        }
+
+        .bulb.regular.on { 
+            background-color: #ffcc00; 
+            box-shadow: 0 0 60px 20px rgba(255, 204, 0, 0.7); 
+        }
+        
+        .bulb.energy.on { 
+            background-color: #ccffff; 
+            box-shadow: 0 0 50px 15px rgba(204, 255, 255, 0.6); 
+        }
+        
+        .bulb.led.on { 
+            background-color: #ffffff; 
+            box-shadow: 0 0 80px 25px rgba(255, 255, 255, 0.9); 
+        }
+
+        .controls { margin-top: 20px; }
+        button, select { 
+            padding: 10px 15px; 
+            font-size: 16px; 
+            margin: 5px; 
+            cursor: pointer; 
+            border-radius: 5px;
+            border: 1px solid #555;
+            background-color: #333;
+            color: white;
+        }
+        button:hover, select:hover { background-color: #444; }
+    </style>
+</head>
+<body>
+
+    <h1>Управління освітленням</h1>
+
+    <div id="bulb" class="bulb regular"></div>
+
+    <div class="controls">
+        <button id="toggleBtn">Увімкнути</button>
+        
+        <select id="bulbType">
+            <option value="regular">Звичайна</option>
+            <option value="energy">Енергозберігаюча</option>
+            <option value="led">Світлодіодна (LED)</option>
+        </select>
+
+        <button id="brightnessBtn">Яскравість (тільки LED)</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
