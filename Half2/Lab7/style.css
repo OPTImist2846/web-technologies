@@ -15,17 +15,17 @@ body {
 #game-container {
     width: 800px;
     height: 600px;
-    background-color: #000; /* Чорні смуги зверху і знизу */
+    background-color: #000;
     position: relative;
-    border: 4px solid #fff; /* Біла рамка екрану */
+    border: 4px solid #fff;
     display: flex;
     flex-direction: column;
 }
 
 #play-area {
     width: 100%;
-    height: 450px; /* Висота самої картинки пустелі */
-    margin-top: 75px; /* Опускаємо її трохи вниз, залишаючи зверху чорну смугу для рахунку */
+    height: 450px;
+    margin-top: 75px;
     
     /* Підключаємо твій фон */
     background-image: url('bg.png');
@@ -43,11 +43,11 @@ body {
 
 .hud {
     position: absolute;
-    top: 20px; /* Відступ від верхнього краю */
+    top: 20px;
     left: 30px;
     right: 30px;
     display: flex;
-    justify-content: space-between; /* Розкидає рахунок і раунд по кутах */
+    justify-content: space-between;
     font-size: 24px;
     font-weight: bold;
     z-index: 10;
@@ -93,7 +93,6 @@ body {
     white-space: pre-line;
 }
 
-/* Кнопка START */
 #start-btn {
     padding: 15px 40px;
     font-size: 28px;
@@ -112,4 +111,46 @@ body {
 
 .hidden {
     display: none !important;
+}
+
+
+#gunman {
+    width: 31px; 
+    height: 75px;
+    position: absolute;
+    bottom: 210px;
+    left: 50%; 
+    
+    transform: translateX(-50%) scale(3.5); 
+    
+    background-image: url('gunman.png');
+    background-repeat: no-repeat;
+    cursor: crosshair;
+    image-rendering: pixelated; 
+}
+
+.idle {
+    background-position: 1px -68px; 
+}
+
+.shooting {
+    background-position: -100px -68px; 
+}
+
+.dead {
+    background-position: -238px -68px; 
+}
+
+.walking {
+    animation: move-legs 0.4s infinite, move-body 1.5s linear forwards;
+}
+
+@keyframes move-legs {
+    0%, 49.9% { background-position: -32px -67px; } 
+    50%, 100% { background-position: -66px -67px; } 
+}
+
+@keyframes move-body {
+    from { left: -10%; } 
+    to { left: 50%; } 
 }
