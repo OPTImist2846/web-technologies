@@ -1,11 +1,9 @@
-/* Скидаємо стандартні відступи браузера */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Робимо темний фон навколо самої гри і центруємо її на екрані */
 body {
     background-color: #222; 
     display: flex;
@@ -14,7 +12,6 @@ body {
     height: 100vh;
 }
 
-/* Головний екран гри (800x600 пікселів) */
 #game-container {
     width: 800px;
     height: 600px;
@@ -25,7 +22,6 @@ body {
     flex-direction: column;
 }
 
-/* Пустеля */
 #play-area {
     width: 100%;
     height: 450px; /* Висота самої картинки пустелі */
@@ -36,4 +32,84 @@ body {
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
+}
+
+
+body {
+    font-family: 'Courier New', Courier, monospace; /* Ретро-шрифт */
+    color: white;
+}
+
+
+.hud {
+    position: absolute;
+    top: 20px; /* Відступ від верхнього краю */
+    left: 30px;
+    right: 30px;
+    display: flex;
+    justify-content: space-between; /* Розкидає рахунок і раунд по кутах */
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+
+#message-box {
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    color: black;
+    padding: 10px 25px;
+    font-size: 32px;
+    font-weight: bold;
+    border-radius: 15px;
+    z-index: 10;
+}
+
+#result-screen {
+    position: absolute;
+    top: 0; left: 0; 
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 20;
+}
+
+#result-title {
+    font-size: 50px;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+#result-text {
+    font-size: 24px;
+    margin-bottom: 40px;
+    white-space: pre-line;
+}
+
+/* Кнопка START */
+#start-btn {
+    padding: 15px 40px;
+    font-size: 28px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    cursor: pointer;
+    background: #fff;
+    color: #000;
+    border: 4px solid #aaa;
+    transition: 0.2s;
+}
+
+#start-btn:hover {
+    background: #ccc;
+}
+
+.hidden {
+    display: none !important;
 }
