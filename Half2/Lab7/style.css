@@ -1,0 +1,39 @@
+/* Скидаємо стандартні відступи браузера */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Робимо темний фон навколо самої гри і центруємо її на екрані */
+body {
+    background-color: #222; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Головний екран гри (800x600 пікселів) */
+#game-container {
+    width: 800px;
+    height: 600px;
+    background-color: #000; /* Чорні смуги зверху і знизу */
+    position: relative;
+    border: 4px solid #fff; /* Біла рамка екрану */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Пустеля */
+#play-area {
+    width: 100%;
+    height: 450px; /* Висота самої картинки пустелі */
+    margin-top: 75px; /* Опускаємо її трохи вниз, залишаючи зверху чорну смугу для рахунку */
+    
+    /* Підключаємо твій фон */
+    background-image: url('bg.png');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
