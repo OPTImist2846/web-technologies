@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизація та Реєстрація</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="form-wrapper">
+    <div class="tabs">
+        <button class="tab-btn active" id="tab-signup">Signup</button>
+        <button class="tab-btn" id="tab-login">Login</button>
+    </div>
+
+    <form id="form-signup" class="custom-form active" novalidate>
+        <h2>Create an account</h2>
+
+        <div class="form-row">
+            <div class="input-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" placeholder="First name">
+                <div class="error-msg"></div>
+            </div>
+            <div class="input-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" placeholder="Last name">
+                <div class="error-msg"></div>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter email">
+            <div class="error-msg"></div>
+        </div>
+
+        <div class="input-group password-group">
+            <label for="password">Password</label>
+            <div class="pwd-wrapper">
+                <input type="password" id="password" placeholder="Enter password">
+                <span class="toggle-pwd">👁️</span>
+            </div>
+            <div class="error-msg"></div>
+        </div>
+
+        <div class="input-group password-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <div class="pwd-wrapper">
+                <input type="password" id="confirmPassword" placeholder="Confirm password">
+                <span class="toggle-pwd">👁️</span>
+            </div>
+            <div class="error-msg"></div>
+        </div>
+
+        <div class="form-row">
+            <div class="input-group">
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" placeholder="+380...">
+                <div class="error-msg"></div>
+            </div>
+            <div class="input-group">
+                <label for="dob">Date Birth</label>
+                <input type="date" id="dob">
+                <div class="error-msg"></div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="input-group">
+                <label for="sex">Sex</label>
+                <select id="sex">
+                    <option value="">Choose...</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <div class="error-msg"></div>
+            </div>
+            <div class="input-group">
+                <label for="country">Country</label>
+                <select id="country">
+                    <option value="">Choose...</option>
+                    <option value="ukraine">Ukraine</option>
+                    <option value="poland">Poland</option>
+                </select>
+                <div class="error-msg"></div>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="city">City</label>
+            <select id="city" disabled>
+                <option value="">Select country first...</option>
+            </select>
+            <div class="error-msg"></div>
+        </div>
+
+        <button type="submit" class="submit-btn">Signup</button>
+    </form>
+
+
+    <form id="form-login" class="custom-form" novalidate>
+        <h2>Login here</h2>
+
+        <div class="input-group">
+            <label for="login-username">Username</label>
+            <input type="text" id="login-username" placeholder="Enter username">
+            <div class="error-msg"></div>
+        </div>
+
+        <div class="input-group password-group">
+            <label for="login-password">Password</label>
+            <div class="pwd-wrapper">
+                <input type="password" id="login-password" placeholder="Enter password">
+                <span class="toggle-pwd">👁️</span>
+            </div>
+            <div class="error-msg"></div>
+        </div>
+
+        <div class="input-group checkbox-group">
+            <input type="checkbox" id="remember">
+            <label for="remember">Remember Me</label>
+        </div>
+
+        <button type="submit" class="submit-btn">Login</button>
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
